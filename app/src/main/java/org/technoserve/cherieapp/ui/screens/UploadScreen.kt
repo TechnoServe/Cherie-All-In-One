@@ -117,7 +117,16 @@ fun UploadScreen(imageAsByteArray: ByteArray) {
         factory = PredictionViewModelFactory(context.applicationContext as Application)
     )
 
+    val accessKey = "AKIAQYDJFN5YVHCP5552"
+    val secretKey = "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"
 
+    val credentials = BasicAWSCredentials(accessKey, secretKey)
+
+    val region = Regions.US_EAST_2
+
+    val s3Client = AmazonS3Client(credentials)
+
+    s3Client.setRegion(Region.getRegion(region))
 
     val now = Date()
     val objectKey = "countries/${selected_country}/images/${now}.jpg"
