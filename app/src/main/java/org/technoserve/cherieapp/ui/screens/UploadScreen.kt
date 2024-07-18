@@ -117,8 +117,8 @@ fun UploadScreen(imageAsByteArray: ByteArray) {
         factory = PredictionViewModelFactory(context.applicationContext as Application)
     )
 
-    val accessKey = "AKIAQYDJFN5YVHCP5552"
-    val secretKey = "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"
+    val accessKey = ""
+    val secretKey = ""
 
     val credentials = BasicAWSCredentials(accessKey, secretKey)
 
