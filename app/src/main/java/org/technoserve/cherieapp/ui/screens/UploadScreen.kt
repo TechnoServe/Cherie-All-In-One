@@ -122,11 +122,11 @@ fun UploadScreen(imageAsByteArray: ByteArray) {
 //
 //    val credentials = BasicAWSCredentials(accessKey, secretKey)
 
-    val region = Regions.US_EAST_2
+//    val region = Regions.US_EAST_2
+//
+//    val s3Client = AmazonS3Client(credentials)
 
-    val s3Client = AmazonS3Client(credentials)
-
-    s3Client.setRegion(Region.getRegion(region))
+//    s3Client.setRegion(Region.getRegion(region))
 
     val now = Date()
     val objectKey = "countries/${selected_country}/images/${now}.jpg"
